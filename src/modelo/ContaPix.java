@@ -1,7 +1,8 @@
+package modelo;
 
-public class ContaPoupanca extends Conta {
+public class ContaPix extends Conta {
 	
-	public ContaPoupanca(int agencia, int numero) {
+	public ContaPix(int agencia, int numero) {
 		super(agencia, numero);
 	}
 	

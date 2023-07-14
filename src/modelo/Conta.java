@@ -1,3 +1,4 @@
+package modelo;
 
 public abstract class Conta {
 
@@ -75,7 +76,6 @@ public abstract class Conta {
 	}
 
 	double getValorImposto() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
