@@ -22,8 +22,8 @@ public class TesteString {
 //		String sub = nome.substring(1);
 //		System.out.println(sub);
 
-//		int pos = nome.indexOf("ur");
-//		System.out.println(pos);
+		int pos = nome.indexOf("ur");
+		System.out.println(pos);
 		
 //		char c = nome.charAt(2);
 //		System.out.println(c);S
