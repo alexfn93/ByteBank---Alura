@@ -7,7 +7,7 @@ package br.com.bytebank.banco.modelo;
  * @version 0.1
  */
 
-public abstract class Conta {
+public abstract class Conta extends Object {
 
 	protected double saldo;
 	private int agencia;
@@ -38,14 +38,14 @@ public abstract class Conta {
 	 * @param valor
 	 * @throws SaldoInsuficienteException
 	 */
-	public void saca(double valor) throws SaldoInsuficienteException{
+	public void saca(double valor) throws SaldoInsuficienteException {
 		if (this.saldo < valor) {
 			throw new SaldoInsuficienteException("Saldo: " + this.saldo + ", Valor: " + valor);
 		}
 		this.saldo -= valor;
 	}
 
-	public void transfere(double valor, Conta destino) throws SaldoInsuficienteException{
+	public void transfere(double valor, Conta destino) throws SaldoInsuficienteException {
 		this.saca(valor);
 		destino.deposita(valor);
 	}
@@ -94,9 +94,25 @@ public abstract class Conta {
 		return 0;
 	}
 	
-	@Override 
-	public String toString() { 
-	    return "Numero: " + this.numero + ", Agência: " + this.agencia;
+	@Override
+	public boolean equals(Object ref) {
+		
+		Conta outra = (Conta) ref;
+
+		if (this.agencia != outra.agencia) {
+			return false;
+		}
+
+		if (this.numero != outra.numero) {
+			return false;
+		}
+
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Numero: " + this.numero + ", Agência: " + this.agencia;
 	}
 
 }
