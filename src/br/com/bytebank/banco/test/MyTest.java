@@ -16,7 +16,7 @@ public class MyTest {
 		refs[0]  = clienteNormal;
 		refs[1]  = clienteVip;
 
-		System.out.println(refs[1].getNome());
+//		System.out.println(refs[1].getNome());
 		
 		
 	}
